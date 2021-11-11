@@ -7,6 +7,7 @@ import Business from "./screens/Business";
 import HealthScreen from "./screens/Health";
 import SportsScreen from "./screens/Sports";
 import TechScreen from "./screens/Tech";
+import NativeBaseScreen from "./screens/NativeBase";
 import { Icon } from "react-native-elements";
 
 const Tab = createBottomTabNavigator();
@@ -69,6 +70,15 @@ const App = () => {
                 name="hardware-chip-outline"
                 color={props.color}
               />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Native"
+          component={NativeBaseScreen}
+          options={{
+            tabBarIcon: (props) => (
+              <Icon type="ionicon" name="alert" color={props.color} />
             ),
           }}
         />
